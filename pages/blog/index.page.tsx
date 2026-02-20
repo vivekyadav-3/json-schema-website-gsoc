@@ -16,8 +16,10 @@ import Image from 'next/image';
 type Author = {
   name: string;
   photo?: string;
-  link?: string;
+  link?: string; // This seems unused, but let's keep it.
   byline?: string;
+  twitter?: string;
+  linkedin?: string;
 };
 
 export type blogCategories =
@@ -424,7 +426,6 @@ export default function StaticMarkdownPage({
                           )}
                         </div>
                         <div className='text-slate-500 text-sm dark:text-slate-300'>
-                          {frontmatter.date && (
                             <span>
                               {date.toLocaleDateString('en-us', {
                                 year: 'numeric',
@@ -433,6 +434,30 @@ export default function StaticMarkdownPage({
                               })}
                             </span>
                           )}{' '}
+                        </div>
+                        <div className='flex gap-2 text-xs mt-1'>
+                          {author.twitter && (
+                            <a
+                              className='text-blue-500 hover:underline z-10 relative'
+                              href={`https://x.com/${author.twitter}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              Twitter
+                            </a>
+                          )}
+                          {author.linkedin && (
+                            <a
+                              className='text-blue-700 hover:underline z-10 relative'
+                              href={author.linkedin}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              LinkedIn
+                            </a>
+                          )}
                         </div>
                       </div>
                     </div>
