@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
+import Image from 'next/image';
 
 const Logo = () => {
   const { resolvedTheme } = useTheme();
@@ -16,9 +17,12 @@ const Logo = () => {
 
   return (
     <Link href='/' className=''>
-      <img
+      <Image
         src={imageSrc}
-        className='h-8 lg:h-12 top-12 absolute left-1/2 -translate-x-1/2'
+        alt='Logo'
+        width={150}
+        height={48}
+        className='h-8 lg:h-12 top-12 absolute left-1/2 -translate-x-1/2 w-auto'
       />
     </Link>
   );

@@ -6,6 +6,7 @@ import {
   CardTitle,
   CardDescription,
 } from '@/components/ui/card';
+import Image from 'next/image';
 
 interface AmbassadorsLink {
   title: string;
@@ -30,9 +31,11 @@ const AmbassadorList = ({ ambassadorList }: AmbassadorsListProps) => {
         >
           <Card className='dark:border-gray-700 w-full h-full p-5 bg-white dark:bg-gray-800 rounded-lg shadow-lg transform transition hover:scale-105'>
             <CardContent className='p-0'>
-              <img
+              <Image
                 src={link.icon}
                 alt={link.title}
+                width={150}
+                height={150}
                 className='w-[150px] h-auto object-contain mb-5 mx-auto'
               />
               <CardHeader className='p-0 mb-3'>
