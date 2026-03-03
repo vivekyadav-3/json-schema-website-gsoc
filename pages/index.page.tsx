@@ -504,6 +504,7 @@ const Home = (props: any) => {
               <div>
                 <Link
                   href={`/blog/posts/${blogPosts[0].slug}`}
+                  target='_blank'
                   className=' w-full lg:w-1/2 rounded border-2 bg-primary text-white hover:bg-blue-700 transition-all duration-300 ease-in-out h-[40px] text-center pt-1 semi-bold flex items-center justify-center mx-auto dark:border-none'
                 >
                   Read more{' '}
@@ -585,6 +586,7 @@ const Home = (props: any) => {
             </h2>
             <Link
               href='https://github.com/json-schema-org#-contributing-to-json-schema'
+              target='_blank'
               rel='noopener noreferrer'
               className='w-[170px] h-[45px] mx-auto rounded border-2 bg-primary hover:bg-blue-700 transition-all duration-300 ease-in-out text-white font-semibold dark:border-none flex items-center justify-center'
             >
@@ -621,6 +623,8 @@ const Home = (props: any) => {
             <p className='w-5/6 lg:w-3/5 mx-auto'>
               <a
                 href='https://opencollective.com/json-schema'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='border-b border-black dark:border-white'
               >
                 Support us!
@@ -996,7 +1000,7 @@ for Accounting integrations'
             </p>
           </div>
           <div className='flex flex-col items-center md:flex-row justify-center text-center gap-x-14 gap-y-4 mb-12'>
-            <a href='https://dev.events/'>
+            <a href='https://dev.events/' target='_blank' rel='noopener noreferrer'>
               {isClient && (
                 <>
                   <Image
@@ -1033,7 +1037,7 @@ for Accounting integrations'
             </p>
           </div>
           <div className='flex flex-col items-center md:flex-row justify-center text-center gap-x-14 gap-y-4'>
-            <a href='https://www.commonroom.io'>
+            <a href='https://www.commonroom.io' target='_blank' rel='noopener noreferrer'>
               {isClient && (
                 <>
                   <Image

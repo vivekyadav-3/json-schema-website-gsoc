@@ -2,11 +2,11 @@ import React, { ReactNode } from 'react';
 import { Badge as ShadcnBadge } from '../../../../components/ui/badge';
 
 interface TagProps {
-  children: ReactNode;
+  children?: ReactNode;
   intent?: 'success' | 'warning' | 'error' | 'neutral';
 }
 
-const Tag = ({ children, intent = 'neutral' }: TagProps) => {
+const Tag = ({ children, intent = 'neutral', ...props }: TagProps & { [key: string]: any }) => {
   const styles = {
     success:
       'bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400',
@@ -29,6 +29,7 @@ const Tag = ({ children, intent = 'neutral' }: TagProps) => {
               : 'secondary'
       }
       className={`mr-2 text-[12px] font-semibold ${styles[intent]}`}
+      {...props}
     >
       {children}
     </ShadcnBadge>

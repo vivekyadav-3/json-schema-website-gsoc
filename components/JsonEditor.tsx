@@ -516,7 +516,7 @@ export default function JsonEditor({
           },
         )}
       >
-        <div className='flex flex-row absolute right-0 z-10'>
+        <div className='flex flex-row absolute right-0 top-0 mt-2 mr-2 z-10'>
           {/* Copy code button */}
           <Button
             variant='ghost'

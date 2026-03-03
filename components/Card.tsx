@@ -107,8 +107,14 @@ const CardBody = ({
 };
 
 const Card: React.FC<CardProps> = ({ link, ...props }) => {
+  const isExternal = link?.startsWith('http') || link?.startsWith('//');
   return link ? (
-    <Link href={link} data-test='card-link'>
+    <Link
+      href={link}
+      data-test='card-link'
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
+    >
       <CardBody link={link} {...props} />
     </Link>
   ) : (

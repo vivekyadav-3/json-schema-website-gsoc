@@ -254,7 +254,8 @@ const ToolingTable = ({
                               <a
                                 className='flex justify-center items-center h-full'
                                 href={`https://bowtie.report/#/implementations/${bowtieData.id}`}
-                                target='blank'
+                                target='_blank'
+                                rel='noopener noreferrer'
                                 onClick={(event) => event.stopPropagation()}
                                 title='See at Bowtie'
                               >
@@ -292,7 +293,8 @@ const ToolingTable = ({
                             <span>Bowtie:</span>
                             <a
                               href={`https://bowtie.report/#/implementations/${bowtieData.id}`}
-                              target='blank'
+                              target='_blank'
+                              rel='noopener noreferrer'
                               onClick={(event) => event.stopPropagation()}
                               title='See at Bowtie'
                               className='ml-1'
@@ -302,7 +304,7 @@ const ToolingTable = ({
                           </div>
                         )}
 
-                        <div className='flex justify-between items-center'>
+                        <div className='flex justify-between items-center pr-16'>
                           <div className='font-medium'>
                             {tool.name}
                             {tool.status === 'obsolete' && (
@@ -343,7 +345,7 @@ const TableColumnHeader = ({
   children,
   attributes: propAttributes,
 }: {
-  children: ReactNode | ReactNode[];
+  children?: ReactNode;
   attributes?: Record<string, any>;
 }) => {
   return (
@@ -432,7 +434,7 @@ const TableCell = ({
   children,
   attributes: propAttributes,
 }: {
-  children: ReactNode | ReactNode[];
+  children?: ReactNode;
   attributes?: Record<string, any>;
 }) => {
   return (

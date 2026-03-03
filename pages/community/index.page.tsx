@@ -105,7 +105,7 @@ export default function CommunityPages(props: any) {
                   onClick={() =>
                     window.open(
                       'https://github.com/orgs/json-schema-org/discussions',
-                      '_self',
+                      '_blank',
                     )
                   }
                 >
@@ -247,6 +247,7 @@ export default function CommunityPages(props: any) {
                   <div className='mt-10 flex justify-center'>
                     <a
                       href='https://github.com/orgs/json-schema-org/discussions/35'
+                      target='_blank'
                       rel='noopener noreferrer'
                       className='bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded block md:inline-block focus:outline-none'
                     >
@@ -256,6 +257,7 @@ export default function CommunityPages(props: any) {
                   <div className='mt-4 flex justify-center'>
                     <a
                       href='https://github.com/orgs/json-schema-org/discussions/34/'
+                      target='_blank'
                       rel='noopener noreferrer'
                       className='bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded block md:inline-block focus:outline-none'
                     >
